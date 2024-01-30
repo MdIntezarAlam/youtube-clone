@@ -12,7 +12,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
                 flexDirection: { md: 'column' },
 
             }} >
-            {categories.map((category) => (
+            {categories?.map((category) => (
                 <button className='category-btn' onClick={()=>setSelectedCategory(category.name)}
                     style={{ background: category.name === selectedCategory && '#FC1503', color: "#fff" }}
                     key={category.name}
