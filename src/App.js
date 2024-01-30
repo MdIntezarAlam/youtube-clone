@@ -1,20 +1,26 @@
-import { Router, Routes, Route } from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { Box } from '@mui/material'
+import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Box } from "@mui/material";
 
-import { Navbar, Feed, VideoDetail, ChannelDetail, SearchFeed } from './component'
+import {
+  Navbar,
+  Feed,
+  VideoDetail,
+  ChannelDetail,
+  SearchFeed,
+} from "./component";
 
 function App() {
   return (
     <BrowserRouter>
       {/* sx means inline css in mui  */}
-      <Box sx={{ backgroundColor: "#000"}}>
+      <Box sx={{ backgroundColor: "#000" }}>
         <Navbar />
         <Routes>
-          <Route path='/' exact element={<Feed />} />
-          <Route path='/video/:id' exact element={<VideoDetail />} />
-          <Route path='/channel/:id' exact element={<ChannelDetail />} />
-          <Route path='/search/:searchTerm' exact element={<SearchFeed />} />
+          <Route path="/" exact element={<Feed />} />
+          <Route path="/video/:id" exact element={<VideoDetail />} />
+          <Route path="/channel/:id" exact element={<ChannelDetail />} />
+          <Route path="/search/:searchTerm" exact element={<SearchFeed />} />
         </Routes>
       </Box>
     </BrowserRouter>
